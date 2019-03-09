@@ -1,0 +1,5 @@
+{
+    "dependencies": {
+        "fs-cheerio": "3.0.0"
+    }
+}

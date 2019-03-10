@@ -1,6 +1,5 @@
 {
     "dependencies": {
-        "fs-cheerio": "3.0.0",
-        "fs-copy-file-sync": "1.1.1"
+        "cheerio": "1.0.0-rc.2"
     }
 }

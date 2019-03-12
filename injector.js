@@ -1,4 +1,4 @@
-const rimraf                                                                = require('rimraf');
+const { sync }                                                              = require('rimraf');
 const { join }                                                              = require('path');
 const { load }                                                              = require('cheerio');
 const { unlinkSync, copyFileSync, writeFileSync, readFileSync, mkdirSync }  = require('fs');
@@ -27,5 +27,5 @@ exports.uninject = () => {
     // Uninject everything and remove backup
     copyFileSync('./backup-index.min.html', `${app}\\index.min.html`);
     unlinkSync('./backup-index.min.html');
-    rimraf.sync(`${app}\\trophy`);
+    sync(`${app}\\trophy`);
 }

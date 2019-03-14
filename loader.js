@@ -6,7 +6,7 @@ readdir('./resources/app/trophy/themes/', (err, files) => { // Start https://ani
     files.forEach(file => {
         if (!file.endsWith('.css')) return;
         let name = file.split('.')[0];
-        $('head').append(`<link rel='stylesheet' href='./trophy/themes/${name}.css'/>`);
+        document.head.insertAdjacentHTML('beforeend', `<link rel='stylesheet' href='./trophy/themes/${name}.css'/>`);
     });
 }); // End https://anidiots.guide/first-bot/a-basic-command-handler (MODIFIED)
 
@@ -16,6 +16,6 @@ readdir('./resources/app/trophy/plugins/', (err, files) => { // Start https://an
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
         let name = file.split('.')[0];
-        $('body').append(`<script src='./trophy/plugins/${name}.js'></script>`);
+        document.body.insertAdjacentHTML('beforeend', `<script src='./trophy/plugins/${name}.js'></script>`);
     });
 }); // End https://anidiots.guide/first-bot/a-basic-command-handler (MODIFIED)

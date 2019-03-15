@@ -13,12 +13,10 @@ exports.inject = async () => {
     mkdirSync(`${app}\\trophy`);
     mkdirSync(`${app}\\trophy\\themes`);
     mkdirSync(`${app}\\trophy\\plugins`);
-    copyFileSync('./jquery.slim.min.js', `${app}\\trophy\\jquery.slim.min.js`);
     copyFileSync('./loader.js', `${app}\\trophy\\loader.js`);
     // Inject into the Medal HTML
     const file = readFileSync(`${app}\\index.min.html`);
     let $ = load(file);
-    $('body').append('<script src="./trophy/jquery.slim.min.js"></script>');
     $('body').append('<script src="./trophy/loader.js"></script>');
     await writeFileSync(`${app}\\index.min.html`, $.html());
 }

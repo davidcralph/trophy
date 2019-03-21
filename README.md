@@ -11,7 +11,7 @@ Lightweight client mod for the Medal.tv desktop app. Only supports Windows as Me
 ## Installation 
 1. ``git clone https://github.com/ohlookitsderpy/Trophy``
 2. ``cd Trophy``
-3. ``npm i``
+3. ``npm i`` (or ``yarn``)
 4. ``node index.js inject`` (or ``node index.js uninject`` if you want to remove Trophy)
 5. Start modding!
 

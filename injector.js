@@ -1,10 +1,10 @@
-const { sync }                                                              = require('rimraf');
-const { join }                                                              = require('path');
-const { load }                                                              = require('cheerio');
-const { unlinkSync, copyFileSync, writeFileSync, readFileSync, mkdirSync }  = require('fs');
+const { sync }                                                             = require('rimraf');
+const { join }                                                             = require('path');
+const { load }                                                             = require('cheerio');
+const { unlinkSync, copyFileSync, writeFileSync, readFileSync, mkdirSync } = require('fs');
 
 const path = join(process.env.LOCALAPPDATA, 'Medal'); // This line is based on Powercord's Windows injector, which can be found at https://github.com/powercord-org/powercord/blob/v2/injectors/win32.js (MIT LICENSE)
-const app = `${path}\\app-4.87.0\\resources\\app`;
+const app  = `${path}\\app-4.87.0\\resources\\app`;
 
 exports.inject = async () => {
     // Create backup

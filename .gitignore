@@ -1,0 +1,6 @@
+# Directories
+node_modules/
+
+# Files
+package-lock.json
+backup-index.min.html

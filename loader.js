@@ -1,9 +1,10 @@
 //* Imports
-const { readdir } = require('fs');
+const fs = require('fs');
 
-//* Loaders (Based on https://anidiots.guide/first-bot/a-basic-command-handler)
+//* Loaders
 // Themes
-readdir('./resources/app/trophy/themes/', (err, files) => {
+if (!fs.existsSync('./resources/app/trophy/themes')) return console.log('[Trophy] Themes directory doesn\'t exist!');
+fs.readdir('./resources/app/trophy/themes/', (err, files) => {
     if (err) return console.log('[Trophy]' + err);
     files.forEach(file => {
         if (!file.endsWith('.css')) return;
@@ -12,7 +13,8 @@ readdir('./resources/app/trophy/themes/', (err, files) => {
 }); 
 
 // Plugins
-readdir('./resources/app/trophy/plugins/', (err, files) => {
+if (!fs.existsSync('./resources/app/trophy/themes')) return console.log('[Trophy] Plugins directory doesn\'t exist!');
+fs.readdir('./resources/app/trophy/plugins/', (err, files) => {
     if (err) return console.log('[Trophy]' + err);
     files.forEach(file => {
         if (!file.endsWith('.js')) return;

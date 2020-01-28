@@ -1,4 +1,14 @@
 {
+    "private": true,
+    "name": "trophy",
+    "version": "1.0.0",
+    "author": "David \"ohlookitsderpy\" Ralph",
+    "license": "MIT",
+    "description": "Lightweight client mod for the Medal.tv desktop app",
+    "scripts": {
+        "inject": "node index.js inject",
+        "uninject": "node index.js uninject"
+    },
     "dependencies": {
         "cheerio": "1.0.0-rc.3",
         "rimraf": "3.0.1"

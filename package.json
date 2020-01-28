@@ -1,6 +1,6 @@
 {
     "dependencies": {
         "cheerio": "1.0.0-rc.3",
-        "rimraf": "3.0.0"
+        "rimraf": "3.0.1"
     }
 }

@@ -2,8 +2,9 @@
 const fs = require('fs');
 
 //* Loaders
+console.log('[Trophy] Injecting...');
 // Themes
-if (!fs.existsSync('./resources/app/trophy/themes')) return console.log('[Trophy] Themes directory doesn\'t exist!');
+if (!fs.existsSync('./resources/app/trophy/themes')) console.log('[Trophy] Themes directory doesn\'t exist!');
 fs.readdir('./resources/app/trophy/themes/', (err, files) => {
     if (err) return console.log('[Trophy]' + err);
     files.forEach(file => {
@@ -13,7 +14,7 @@ fs.readdir('./resources/app/trophy/themes/', (err, files) => {
 }); 
 
 // Plugins
-if (!fs.existsSync('./resources/app/trophy/themes')) return console.log('[Trophy] Plugins directory doesn\'t exist!');
+if (!fs.existsSync('./resources/app/trophy/themes')) console.log('[Trophy] Plugins directory doesn\'t exist!');
 fs.readdir('./resources/app/trophy/plugins/', (err, files) => {
     if (err) return console.log('[Trophy]' + err);
     files.forEach(file => {

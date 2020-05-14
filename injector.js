@@ -7,13 +7,13 @@ const fs = require('fs');
 const app = `${path.join(process.env.LOCALAPPDATA, 'Medal')}\\app-4.439.0\\resources\\app`;
 
 module.exports.inject = () => {
-    // Create backup
-    fs.copyFileSync(`${app}\\index.min.html`, './backup-index.min.html');
     // Create directories and copy loader
-    fs.mkdirSync(`${app}\\trophy`);
-    fs.mkdirSync(`${app}\\trophy\\themes`);
+    if (fs.existsSync(`${app}\\trophy`)) return console.log('Looks like you already have a Trophy installation! Please remove it and try again.');
+    fs.mkdirSync(`${app}\\trophy\\themes`, { recursive: true });
     fs.mkdirSync(`${app}\\trophy\\plugins`);
     fs.copyFileSync('./loader.js', `${app}\\trophy\\loader.js`);
+    // Create backup of Medal HTML
+    fs.copyFileSync(`${app}\\index.min.html`, './backup-index.min.html');
     // Inject into the Medal HTML
     let $ = cheerio.load(fs.readFileSync(`${app}\\index.min.html`));
     $('body').append('<script src=\'./trophy/loader.js\'></script>');

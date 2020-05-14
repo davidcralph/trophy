@@ -27,7 +27,8 @@ Lightweight client mod for the [Medal.tv](https://medal.tv) desktop app. Only su
 1. Enter Trophy directory.
 2. ``git pull``
 3. ``npm i`` (or ``yarn``)
-4. ``npm uninject`` && ``npm inject`` (or ``node index.js uninject`` & ``node index.js inject``)
+4. ``npm uninject`` & ``npm inject`` (or ``node index.js uninject`` & ``node index.js inject``)
+
 (Without Git)
 1. Download Trophy folder and replace over old one
 3. Repeat steps 3-4

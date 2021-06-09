@@ -10,7 +10,7 @@
         "uninject": "node index.js uninject"
     },
     "dependencies": {
-        "cheerio": "1.0.0-rc.6",
+        "cheerio": "1.0.0-rc.10",
         "rimraf": "3.0.2"
     }
 }

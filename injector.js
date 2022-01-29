@@ -1,14 +1,26 @@
-//* Imports
 const rimraf = require('rimraf');
 const path = require('path');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-const app = `${path.join(process.env.LOCALAPPDATA, 'Medal')}\\app-4.439.0\\resources\\app`;
+// Get path
+let appFolder;
+const medalFolder = fs.readdirSync(`${path.join(process.env.LOCALAPPDATA, 'Medal')}`);
+for (let i = 0; i < medalFolder.length; i++) { 
+    if (medalFolder[i].startsWith('app-')) {
+        appFolder = medalFolder[i];
+        break;
+    }
+}
+
+const app = `${path.join(process.env.LOCALAPPDATA, 'Medal')}\\${appFolder}\\resources\\app`;
 
 module.exports.inject = () => {
     // Create directories and copy loader
-    if (fs.existsSync(`${app}\\trophy`)) return console.log('Looks like you already have a Trophy installation! Please remove it and try again.');
+    if (fs.existsSync(`${app}\\trophy`)) {
+        return console.log('Looks like you already have a Trophy installation! Please remove it and try again.');
+    }
+
     fs.mkdirSync(`${app}\\trophy\\themes`, { recursive: true });
     fs.mkdirSync(`${app}\\trophy\\plugins`);
     fs.copyFileSync('./loader.js', `${app}\\trophy\\loader.js`);

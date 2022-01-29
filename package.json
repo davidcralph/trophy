@@ -1,8 +1,8 @@
 {
     "private": true,
     "name": "trophy",
-    "version": "1.0.0",
-    "author": "David \"ohlookitsderpy\" Ralph",
+    "version": "1.0.1",
+    "author": "David Ralph",
     "license": "MIT",
     "description": "Lightweight client mod for the Medal.tv desktop app",
     "scripts": {

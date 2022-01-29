@@ -11,7 +11,7 @@ Lightweight client mod for the [Medal.tv](https://medal.tv) desktop app. Only su
 ``Medal Desktop App``
 
 ## Installation 
-1. ``git clone https://github.com/ohlookitsderpy/Trophy`` (If you don't have Git just go to **Clone or download** and click **Download ZIP**)
+1. ``git clone https://github.com/davidcralph/Trophy`` (If you don't have Git just go to **Clone or download** and click **Download ZIP**)
 2. ``cd Trophy``
 3. ``npm i`` (or ``yarn``)
 4. ``npm inject`` (or ``node index.js inject``)
